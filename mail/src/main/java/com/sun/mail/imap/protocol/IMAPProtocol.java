@@ -1761,8 +1761,6 @@ public class IMAPProtocol extends Protocol {
 
     protected BODY fetchBody(int msgno, String section, boolean peek)
 			throws ProtocolException {
-	Response[] r;
-
 	if (section == null)
 	    section = "";
 	String body = (peek ? "BODY.PEEK[" : "BODY[") + section + "]";
